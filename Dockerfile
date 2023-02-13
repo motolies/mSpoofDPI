@@ -12,4 +12,9 @@ WORKDIR /app/
 
 COPY --from=builder /src/SpoofDPI/spoof-dpi .
 
-CMD [ "./spoof-dpi", "--addr=0.0.0.0", "--dns=1.1.1.1", "--port=18181", "--debug=true"]
+ENV DNS 1.1.1.1
+ENV DEBUG false
+ENV PORT 8080
+EXPOSE $PORT
+
+CMD ["sh", "-c", "./spoof-dpi --addr=0.0.0.0 --dns=$DNS --port=$PORT --debug=$DEBUG"]
