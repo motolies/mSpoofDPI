@@ -7,8 +7,8 @@ on:
 
 env:
   DOCKERHUB_USER: knw1234
-  DOCKER_IMAGE_NAME: knw1234/spoofDPI
-  GHCR_IMAGE_NAME: motolies/spoofDPI
+  DOCKER_IMAGE_NAME: knw1234/spoof-dpi
+  GHCR_IMAGE_NAME: motolies/spoof-dpi
 
 jobs:
   main:
