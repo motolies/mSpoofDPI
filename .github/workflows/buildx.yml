@@ -58,7 +58,7 @@ jobs:
             ghcr.io/${{ env.GHCR_IMAGE_NAME }}:latest
             ghcr.io/${{ env.GHCR_IMAGE_NAME }}:${{ env.COMMIT_HASH }}
             ghcr.io/${{ env.GHCR_IMAGE_NAME }}:${{ env.BUILD_TIMESTAMP }}
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64,linux/arm64,darwin/arm64
           build-args: |
             VERSION=${{ env.COMMIT_HASH }}
             BUILD_TIMESTAMP=${{ env.BUILD_TIMESTAMP }}
